@@ -48,6 +48,12 @@ public class HelloWorldModel {
     @SlingObject
     private ResourceResolver resourceResolver;
 
+    @ValueMapValue(injectionStrategy=InjectionStrategy.OPTIONAL)
+    protected String greeting;
+
+    @ValueMapValue(injectionStrategy=InjectionStrategy.OPTIONAL)
+    protected String text;
+
     private String message;
 
     @PostConstruct
@@ -65,6 +71,15 @@ public class HelloWorldModel {
 
     public String getMessage() {
         return message;
+    }
+
+    public String getGreeting() {
+        return this.greeting;
+    }
+    
+
+    public String getTextUpperCase() {
+        return this.text.toUpperCase();
     }
 
 }
