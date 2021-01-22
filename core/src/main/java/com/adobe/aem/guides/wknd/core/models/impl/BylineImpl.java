@@ -1,18 +1,3 @@
-/*
- *  Copyright 2019 Adobe Systems Incorporated
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
 package com.adobe.aem.guides.wknd.core.models.impl;
 
 import java.util.ArrayList;
@@ -68,12 +53,12 @@ public class BylineImpl implements Byline {
 
     @Override
     public List<String> getOccupations() {
-         if (occupations != null) {
-             Collections.sort(occupations);
-             return new ArrayList<String>(occupations);
-         } else {
-             return Collections.emptyList();
-         }
+        if (occupations != null) {
+            Collections.sort(occupations);
+            return new ArrayList<String>(occupations);
+        } else {
+            return Collections.emptyList();
+        }
     }
 
     @Override
@@ -96,8 +81,8 @@ public class BylineImpl implements Byline {
     }
 
     /**
-     * @return the Image Sling Model of this resource, or null if the resource cannot create a valid Image Sling Model. 
-     */
+    * @return the Image Sling Model of this resource, or null if the resource cannot create a valid Image Sling Model.
+    */
     private Image getImage() {
         return image;
     }
